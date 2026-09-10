@@ -104,8 +104,8 @@ export function Hero() {
           <Image
             src="/Profile.jpg"
             alt="Kartikey Sharma"
-            width={1500}
-            height={1500}
+            width={1280}
+            height={1280}
             priority
             sizes="(min-width: 640px) 96px, 80px"
             className="size-20 rounded-full border border-border/70 object-cover select-none sm:size-24"
