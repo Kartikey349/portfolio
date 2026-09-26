@@ -1,9 +1,13 @@
 import {
+  siClerk,
   siDaisyui,
+  siDrizzle,
+  siExcalidraw,
   siExpress,
-  siFirebase,
   siJsonwebtokens,
   siMongodb,
+  siNextdotjs,
+  siPostgresql,
   siReact,
   siRedux,
   siSocketdotio,
@@ -23,7 +27,11 @@ const ICON_MAP: Record<string, SimpleIcon> = {
   Redux: siRedux,
   "Socket.io": siSocketdotio,
   TypeScript: siTypescript,
-  "Firebase Auth": siFirebase,
+  "Next.js": siNextdotjs,
+  Clerk: siClerk,
+  Drizzle: siDrizzle,
+  PostgreSQL: siPostgresql,
+  Excalidraw: siExcalidraw,
 };
 
 type TechIconProps = {

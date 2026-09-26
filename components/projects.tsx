@@ -1,4 +1,5 @@
 import { ProjectCard } from "@/components/project-card";
+import { Accordion } from "@/components/ui/accordion";
 import { projects } from "@/data/projects";
 
 export function Projects() {
@@ -14,7 +15,7 @@ export function Projects() {
           A few things I&apos;ve built.
         </p>
       </header>
-      <div className="grid grid-cols-1 gap-x-8 gap-y-12 md:grid-cols-2">
+      <Accordion className="grid grid-cols-1 items-start gap-4 md:grid-cols-2 md:gap-x-8 md:gap-y-6">
         {projects.map((project, index) => (
           <ProjectCard
             key={project.id}
@@ -23,7 +24,7 @@ export function Projects() {
             total={projects.length}
           />
         ))}
-      </div>
+      </Accordion>
     </>
   );
 }
