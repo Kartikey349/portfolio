@@ -59,7 +59,7 @@ export function Navbar() {
             </a>
           ))}
           <a
-            href="/resume.pdf"
+            href="/Kartikey_Sharma_resume_3.pdf"
             target="_blank"
             rel="noopener noreferrer"
             className="text-sm tracking-wide text-muted-foreground transition-colors hover:text-foreground"
@@ -104,7 +104,7 @@ export function Navbar() {
               </a>
             ))}
             <a
-              href="/resume.pdf"
+              href="/Kartikey_Sharma_resume_3.pdf"
               target="_blank"
               rel="noopener noreferrer"
               onClick={() => setOpen(false)}
