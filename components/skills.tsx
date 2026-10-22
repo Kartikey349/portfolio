@@ -1,12 +1,25 @@
 "use client";
 
+import {
+  Bot,
+  MessageSquareText,
+  Network,
+  Search,
+  UserCheck,
+  Wrench,
+  Zap,
+  type LucideIcon,
+} from "lucide-react";
 import { motion, useReducedMotion, type Variants } from "motion/react";
 import {
   siDocker,
   siExpress,
+  siFastapi,
   siGit,
   siJavascript,
   siJsonwebtokens,
+  siLangchain,
+  siLanggraph,
   siMongodb,
   siNextdotjs,
   siNodedotjs,
@@ -19,6 +32,7 @@ import {
   siRedis,
   siRedux,
   siSocketdotio,
+  siSqlite,
   siTailwindcss,
   siTypescript,
 } from "simple-icons";
@@ -43,7 +57,8 @@ const item: Variants = {
 
 type Skill = {
   label: string;
-  path: string;
+  path?: string;
+  icon?: LucideIcon;
 };
 
 const SKILLS: Skill[] = [
@@ -66,6 +81,17 @@ const SKILLS: Skill[] = [
   { label: "Redux", path: siRedux.path },
   { label: "Socket.io", path: siSocketdotio.path },
   { label: "JWT", path: siJsonwebtokens.path },
+  { label: "FastAPI", path: siFastapi.path },
+  { label: "SQLite", path: siSqlite.path },
+  { label: "LangChain", path: siLangchain.path },
+  { label: "LangGraph", path: siLanggraph.path },
+  { label: "Groq", icon: Zap },
+  { label: "Agentic AI", icon: Bot },
+  { label: "Multi-Agent Systems", icon: Network },
+  { label: "RAG", icon: Search },
+  { label: "Prompt Engineering", icon: MessageSquareText },
+  { label: "Tool Calling", icon: Wrench },
+  { label: "Human-in-the-Loop (HITL)", icon: UserCheck },
 ];
 
 export function Skills() {
@@ -87,22 +113,34 @@ export function Skills() {
       </header>
 
       <motion.ul variants={item} className="flex flex-wrap gap-2 sm:gap-2.5">
-        {SKILLS.map((skill) => (
-          <li key={skill.label}>
-            <span className="inline-flex h-9 items-center gap-2 rounded-full border border-border bg-card px-3.5 text-[13px] font-medium text-foreground transition-colors duration-150 hover:border-foreground/25 hover:bg-muted">
-              <svg
-                viewBox="0 0 24 24"
-                role="img"
-                aria-label={skill.label}
-                aria-hidden="true"
-                className="size-4 shrink-0 fill-current text-muted-foreground"
-              >
-                <path d={skill.path} />
-              </svg>
-              {skill.label}
-            </span>
-          </li>
-        ))}
+        {SKILLS.map((skill) => {
+          const Icon = skill.icon;
+
+          return (
+            <li key={skill.label}>
+              <span className="inline-flex h-9 items-center gap-2 rounded-full border border-border bg-card px-3.5 text-[13px] font-medium text-foreground transition-colors duration-150 hover:border-foreground/25 hover:bg-muted">
+                {skill.path ? (
+                  <svg
+                    viewBox="0 0 24 24"
+                    role="img"
+                    aria-label={skill.label}
+                    aria-hidden="true"
+                    className="size-4 shrink-0 fill-current text-muted-foreground"
+                  >
+                    <path d={skill.path} />
+                  </svg>
+                ) : Icon ? (
+                  <Icon
+                    aria-hidden="true"
+                    strokeWidth={1.75}
+                    className="size-4 shrink-0 text-muted-foreground"
+                  />
+                ) : null}
+                {skill.label}
+              </span>
+            </li>
+          );
+        })}
       </motion.ul>
     </motion.div>
   );

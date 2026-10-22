@@ -4,6 +4,7 @@ export interface Project {
   tagline: string;
   description: string;
   technologies: string[];
+  image?: string;
   liveUrl?: string;
   githubUrl?: string;
   features: string[];
@@ -13,6 +14,42 @@ export interface Project {
 }
 
 export const projects: Project[] = [
+  {
+    id: "report-agentx",
+    name: "Report-AgentX",
+    tagline:
+      "AI-powered report generation with LangGraph-orchestrated Planner, Researcher, Analyst, and Writer agents.",
+    description:
+      "An AI-powered report generation application using LangGraph to orchestrate Planner, Researcher, Analyst, and Writer agents in a structured workflow.",
+    technologies: [
+      "Python",
+      "LangGraph",
+      "LangChain",
+      "Groq",
+      "FastAPI",
+      "Next.js",
+      "TypeScript",
+      "SQLite",
+    ],
+    image: "/projects/ReportAgentx.png",
+    liveUrl: "https://report-agentx.vercel.app/",
+    featured: true,
+    badge: "Latest",
+    features: [
+      "Integrated Groq-powered LLMs and web research for structured report generation",
+      "Implemented human-in-the-loop approval using LangGraph interrupts and checkpointing",
+      "Built a feedback-driven revision workflow with bounded iterations",
+      "Added SQLite-backed workflow persistence",
+      "Developed a Next.js and TypeScript frontend integrated with FastAPI for report generation, review, and retrieval",
+    ],
+    highlights: [
+      "LangGraph orchestrates Planner, Researcher, Analyst, and Writer agents in a structured workflow",
+      "Groq-powered LLMs and web research drive structured report generation",
+      "LangGraph interrupts and checkpointing enable human-in-the-loop approval",
+      "Bounded revision loops incorporate feedback before a report is finalized",
+      "SQLite persistence stores workflow state behind a FastAPI backend",
+    ],
+  },
   {
     id: "drawgon",
     name: "Drawgon",
@@ -30,10 +67,11 @@ export const projects: Project[] = [
       "Excalidraw",
       "Groq / LLM",
     ],
+    image: "/projects/Drawgon.png",
     githubUrl: "https://github.com/Kartikey349/agentic-whiteboard",
     liveUrl: "https://drawgonx.vercel.app/",
     featured: true,
-    badge: "Featured / Latest",
+    badge: "Featured",
     features: [
       "Whiteboard editing with shapes, text, arrows, freehand drawing, and image support",
       "AI diagram generation from natural-language descriptions, rendered directly on the canvas",
@@ -75,6 +113,7 @@ export const projects: Project[] = [
       "Redux",
       "Socket.io",
     ],
+    image: "/projects/DevTinder.png",
     liveUrl: "https://dev-tinder-frontend-zeta.vercel.app/",
     features: [
       "JWT authentication with password hashing",
@@ -107,6 +146,7 @@ export const projects: Project[] = [
       "JWT",
       "MongoDB",
     ],
+    image: "/projects/SecondBrain.png",
     liveUrl: "https://second-brain-eta-five.vercel.app/",
     features: [
       "Storing and retrieving personal knowledge",

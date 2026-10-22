@@ -123,15 +123,15 @@ export function Hero() {
           variants={item}
           className="mt-3 text-lg leading-snug text-foreground sm:text-xl"
         >
-          Building things for the web, one project at a time.
+          Building for the web, exploring the future of AI.
         </motion.p>
 
         <motion.p
           variants={item}
           className="mt-2.5 text-sm leading-relaxed text-muted-foreground sm:text-base"
         >
-          I&apos;m a full-stack developer focused on building modern web
-          applications, backend systems, and exploring AI.
+          I&apos;m a full-stack developer building modern web applications,
+          backend systems, and agentic AI solutions.
         </motion.p>
 
         <motion.div

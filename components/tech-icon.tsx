@@ -4,13 +4,18 @@ import {
   siDrizzle,
   siExcalidraw,
   siExpress,
+  siFastapi,
   siJsonwebtokens,
+  siLangchain,
+  siLanggraph,
   siMongodb,
   siNextdotjs,
   siPostgresql,
+  siPython,
   siReact,
   siRedux,
   siSocketdotio,
+  siSqlite,
   siTailwindcss,
   siTypescript,
 } from "simple-icons";
@@ -32,6 +37,11 @@ const ICON_MAP: Record<string, SimpleIcon> = {
   Drizzle: siDrizzle,
   PostgreSQL: siPostgresql,
   Excalidraw: siExcalidraw,
+  Python: siPython,
+  LangChain: siLangchain,
+  LangGraph: siLanggraph,
+  FastAPI: siFastapi,
+  SQLite: siSqlite,
 };
 
 type TechIconProps = {

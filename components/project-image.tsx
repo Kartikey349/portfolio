@@ -9,14 +9,14 @@ type ProjectImageProps = {
 
 export function ProjectImage({ src, alt, name, number }: ProjectImageProps) {
   return (
-    <div className="group/visual relative aspect-16/10 overflow-hidden rounded-lg border border-border/60 bg-muted/40">
+    <div className="group/visual relative aspect-video overflow-hidden rounded-lg border border-border/60 bg-muted/40">
       {src ? (
         <Image
           src={src}
           alt={alt}
           fill
           sizes="(min-width: 48rem) 50vw, 100vw"
-          className="object-cover transition-transform duration-700 group-hover/visual:scale-[1.02] motion-reduce:transition-none motion-reduce:group-hover/visual:scale-100"
+          className="object-contain opacity-80 transition-[transform,opacity] duration-700 group-hover/visual:scale-[1.02] group-hover/visual:opacity-100 motion-reduce:transition-none motion-reduce:group-hover/visual:scale-100 motion-reduce:group-hover/visual:opacity-100"
         />
       ) : (
         <div

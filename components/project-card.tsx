@@ -94,6 +94,7 @@ export function ProjectCard({ project, index, total }: ProjectCardProps) {
           )}
         >
           <ProjectImage
+            src={project.image}
             alt={`${project.name} project screenshot`}
             name={project.name}
             number={number}
